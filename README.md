@@ -7,6 +7,5 @@
 
 | #  | Name Project | Live Demo |
 | -- | ------------- | ------------- |
-| 01  | Content Cell  | Live Demo |
-| 02  | Content Cell  | Live Demo |
+| 01  | expanding-cards  | [Live Demo]('https://doblezz.github.io/50-projects-in-50-days/expanding-cards/') |
 
