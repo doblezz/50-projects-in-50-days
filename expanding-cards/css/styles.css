@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #17202A;
+}
+
+.container{
+    display: flex;
+    width:85vw ;
+}
+
+.panel{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 60vh;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    flex: 0.5;
+    margin: 10px;
+    position: relative;
+    -webkit-transition: all 700ms ease-in;
+    overflow: hidden;
+}
+
+.panel .gradient{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    opacity: 0;
+    transition: all ease-out 0.4s;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.panel:hover .gradient{
+    opacity: 1;
+    transition: all ease-out 0.2s;
+    background-color: rgba(28, 40, 51, 0.6);
+}
+
+.panel.active .gradient{
+    opacity: 0;
+}
+
+.panel .title_image{
+    width: 100%;
+    height: 70px;
+    position: absolute;
+    bottom: -70px;
+    left: 0;
+    padding: 20px 0 25px 20px;
+    transition: opacity 0.5s linear 0.3s;
+    background-color: rgba(28, 40, 51, 0.7);
+}
+
+
+.panel.active .title_image{
+    width: 100%;
+    height: 70px;
+    position: absolute;
+    transform: translateY(-70px);
+    left: 0;
+    padding: 20px 0 25px 20px;
+    transition: all ease 500ms;
+    background-color: rgba(28, 40, 51, 0.7);
+}
+
+
+.panel h3{
+    font-size: 24px;
+    opacity: 0;
+}
+
+.panel.active {
+    flex: 5;
+    border-radius: 40px;
+    border: 2px solid #1ABC9C;
+}
+
+
+
+.panel.active h3 {
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+}
+
+/* imagens item */
+.container .panel:nth-child(1){
+    background-image: url('../assets/project-one-1.jpg');
+}
+.container .panel:nth-child(2){
+    background-image: url('../assets/project-one-2.jpg');
+}
+.container .panel:nth-child(3){
+    background-image: url('../assets/project-one-3.jpg');
+}
+.container .panel:nth-child(4){
+    background-image: url('../assets/project-one-4.jpg');
+}
+.container .panel:nth-child(5){
+    background-image: url('../assets/project-one-5.jpg');
+}
+
+
+
+@media (max-width: 480px) {
+    .container {
+      width: 100vw;
+    }
+
+    .panel.active h3{
+        font-size: 15px;
+    }
+
+    .panel:hover .gradient h2{
+        display: none;
+    }
+
+
+  }
